@@ -48,3 +48,4 @@ trap _exit EXIT
 # else
 #     SU=${BCyan}         # User is normal (well ... most of us are).
 # fi
+
