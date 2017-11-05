@@ -1,0 +1,114 @@
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+	# We have color support; assume it's compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
+    else
+	color_prompt=
+    fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+
+NCPU=$(grep -c 'processor' /proc/cpuinfo)    # Number of CPUs
+SLOAD=$(( 100*${NCPU} ))        # Small load
+MLOAD=$(( 200*${NCPU} ))        # Medium load
+XLOAD=$(( 400*${NCPU} ))        # Xlarge load
+
+# Returns system load as percentage, i.e., '40' rather than '0.40)'.
+function load()
+{
+    local SYSLOAD=$(cut -d " " -f1 /proc/loadavg | tr -d '.')
+    # System load of the current host.
+    echo $((10#$SYSLOAD))       # Convert to decimal.
+}
+
+# Returns a color indicating system load.
+function load_color()
+{
+    local SYSLOAD=$(load)
+    if [ ${SYSLOAD} -gt ${XLOAD} ]; then
+        echo -en ${ALERT}
+    elif [ ${SYSLOAD} -gt ${MLOAD} ]; then
+        echo -en ${Red}
+    elif [ ${SYSLOAD} -gt ${SLOAD} ]; then
+        echo -en ${BRed}
+    else
+        echo -en ${Green}
+    fi
+}
+
+# Returns a color according to free disk space in $PWD.
+function disk_color()
+{
+    if [ ! -w "${PWD}" ] ; then
+        echo -en ${Red}
+        # No 'write' privilege in the current directory.
+    elif [ -s "${PWD}" ] ; then
+        local used=$(command df -P "$PWD" |
+                   awk 'END {print $5} {sub(/%/,"")}')
+        if [ ${used} -gt 95 ]; then
+            echo -en ${ALERT}           # Disk almost full (>95%).
+        elif [ ${used} -gt 90 ]; then
+            echo -en ${BRed}            # Free disk space almost gone.
+        else
+            echo -en ${Green}           # Free disk space is ok.
+        fi
+    else
+        echo -en ${Cyan}
+        # Current directory is size '0' (like /proc, /sys etc).
+    fi
+}
+
+# Returns a color according to running/suspended jobs.
+function job_color()
+{
+    if [ $(jobs -s | wc -l) -gt "0" ]; then
+        echo -en ${BRed}
+    elif [ $(jobs -r | wc -l) -gt "0" ] ; then
+        echo -en ${BCyan}
+    fi
+}
+
+# Now we construct the prompt.
+PROMPT_COMMAND="history -a"
+case ${TERM} in
+  *term | rxvt | linux)
+        PS1="\[\$(load_color)\][\A\[${NC}\] "
+        # Time of day (with load info):
+        PS1="\[\$(load_color)\][\A\[${NC}\] "
+        # User@Host (with connection type info):
+        PS1=${PS1}"\[${SU}\]\u\[${NC}\]@\[${CNX}\]\h\[${NC}\] "
+        # PWD (with 'disk space' info):
+        PS1=${PS1}"\[\$(disk_color)\]\W]\[${NC}\] "
+        # Prompt (with 'job' info):
+        PS1=${PS1}"\[\$(job_color)\]>\[${NC}\] "
+        # Set title of current xterm:
+        PS1=${PS1}"\[\e]0;[\u@\h] \w\a\]"
+        ;;
+    *)
+        PS1="(\A \u@\h \W) > " # --> PS1="(\A \u@\h \w) > "
+                               # --> Shows full pathname of current dir.
+        ;;
+esac
+
+if [ "${BASH_VERSION%.*}" \< "3.0" ]; then
+    echo "You will need to upgrade to version 3.0 for full \
+          programmable completion features"
+    return
+fi
+
+PS1="\e[1;32m[\u@\h \W]\$ \e[m "

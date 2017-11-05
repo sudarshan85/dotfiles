@@ -1,0 +1,75 @@
+# system specific
+
+# general
+alias jnote="jupyter notebook"
+alias sac="source activate"
+alias mem="watch -n 5 free -m"
+alias pdf="evince"
+alias wget="wget -c"
+alias grep="grep -n --color"
+alias bsr="source ~/.bashrc"
+alias vi="vim"
+alias show="clear; cat ~/.dotfiles/shell/aliases | grep"
+
+# git
+alias gup="git remote update origin --prune"
+alias gpo='git push origin master'
+alias gp='git pull'
+alias gs='git status'
+alias gd='git diff'
+alias gr='git reflog'
+alias glf='git ls-files'
+
+# update/upgrade
+alias cla="sudo apt-get update; sudo apt-get -y upgrade; sudo apt-get -y dist-upgrade; sudo apt-get -y autoremove; sudo apt-get autoclean; history -c; cd; clear"
+alias ins="sudo apt-get install"
+alias rem="sudo apt-get remove"
+alias auto="sudo apt-get autoremove"
+alias sr="apt-cache search -n"
+alias addppa="sudo add-apt-repository"
+alias dep="apt-rdepends"
+
+# tmux aliases
+alias tnew="tmux new -s"
+alias tatt="tmux attach -t"
+alias tls="tmux list-sessions"
+alias tkill="tmux kill-session -t"
+
+alias mkdir='mkdir -p'
+alias h='history'
+alias j='jobs -l'
+alias which='type -a'
+alias ..='cd ..'
+alias more='less'
+
+# Pretty-print of some PATH variables:
+alias path='echo -e ${PATH//:/\\n}'
+alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
+
+alias du='du -kh'    # Makes a more readable output.
+alias df='df -kTh'
+
+#-------------------------------------------------------------
+# The 'ls' family (this assumes you use a recent GNU ls).
+#-------------------------------------------------------------
+# Add colors for filetype and  human-readable sizes by default on 'ls':
+alias ls='ls -h --color'
+alias lx='ls -lXB'         #  Sort by extension.
+alias lk='ls -lSr'         #  Sort by size, biggest last.
+alias lt='ls -ltr'         #  Sort by date, most recent last.
+alias lc='ls -ltcr'        #  Sort by/show change time,most recent last.
+alias lu='ls -ltur'        #  Sort by/show access time,most recent last.
+
+# The ubiquitous 'll': directories first, with alphanumeric sorting:
+alias ll="ls -lv --group-directories-first"
+alias lm='ll |more'        #  Pipe through 'more'
+alias lr='ll -R'           #  Recursive ls.
+alias la='ll -A'           #  Show hidden files.
+alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
+
+# Cool colors for man pages
+alias man="TERMINFO=~/.terminfo TERM=mostlike LESS=C PAGER=less man"
+
+# Aliases that use xtitle
+alias top='xtitle Processes on $HOST && top'
+alias make='xtitle Making $(basename $PWD) ; make'
