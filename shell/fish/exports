@@ -4,3 +4,6 @@ set PATH /home/sudarshan/anaconda3/bin $PATH
 # cuda
 set PATH /usr/local/cuda-9.0/bin $PATH
 set LD_LIBRARY_PATH /usr/local/cuda-9.0/lib64 $LD_LIBRARY_PATH
+
+# MIMIC
+set mimic_datadir /mnt/Data/MIMIC_dataset/

@@ -7,9 +7,10 @@ alias pdf='evince'
 alias wget='wget -c'
 alias grep='grep -n --color'
 alias vi='vim'
-alias show='clear; cat ~/.config/fish/aliases | grep'
-alias sac='source activate'
-alias sd='source deactivate'
+alias show='clear; cat ~/.dotfiles/shell/fish/aliases | grep'
+alias act='activate'
+alias dact='conda deactivate'
+alias ctrlc='xclip -sel clip'
 
 # update/upgrade
 alias cla='sudo apt-get update; sudo apt-get -y upgrade; sudo apt-get -y dist-upgrade; sudo apt-get -y autoremove; sudo apt-get autoclean; cd; clear'
