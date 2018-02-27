@@ -2,6 +2,7 @@
 
 # general
 alias jnote='jupyter notebook'
+alias jlab='jupyter lab'
 alias mem='watch -n 5 free -m'
 alias pdf='evince'
 alias wget='wget -c'
