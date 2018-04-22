@@ -6,4 +6,10 @@ set PATH /usr/local/cuda-9.0/bin $PATH
 set LD_LIBRARY_PATH /usr/local/cuda-9.0/lib64 $LD_LIBRARY_PATH
 
 # MIMIC
-set mimic_datadir /mnt/Data/MIMIC_dataset/
+set mimic_datadir /mnt/Data/ml/MIMIC_dataset/
+
+# FastAI
+set fastai_dir /home/sudarshan/fastai
+
+# Kaggle
+set kaggle_dir /mnt/Data/ml/kaggle/competitions

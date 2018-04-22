@@ -1,7 +1,7 @@
 # system specific
 
 # general
-alias jnote='jupyter notebook'
+alias jnote='jupyter notebook --no-browser'
 alias jlab='jupyter lab'
 alias mem='watch -n 5 free -m'
 alias pdf='evince'
