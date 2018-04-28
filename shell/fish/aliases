@@ -13,6 +13,9 @@ alias act='activate'
 alias dact='conda deactivate'
 alias ctrlc='xclip -sel clip'
 
+# git
+alias gitsync='git fetch upstream; git checkout master; git merge upstream/master; git push origin master'
+
 # update/upgrade
 alias cla='sudo apt-get update; sudo apt-get -y upgrade; sudo apt-get -y dist-upgrade; sudo apt-get -y autoremove; sudo apt-get autoclean; cd; clear'
 alias ins='sudo apt-get install'
