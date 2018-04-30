@@ -17,10 +17,11 @@ alias ctrlc='xclip -sel clip'
 alias gitsync='git fetch upstream; git checkout master; git merge upstream/master; git push origin master'
 
 # update/upgrade
-alias cla='sudo apt-get update; sudo apt-get -y upgrade; sudo apt-get -y dist-upgrade; sudo apt-get -y autoremove; sudo apt-get autoclean; cd; clear'
-alias ins='sudo apt-get install'
-alias rem='sudo apt-get remove'
-alias auto='sudo apt-get autoremove'
+alias info='apt-cache show'
+alias cla='sudo apt update; sudo apt -y upgrade; sudo apt -y dist-upgrade; sudo apt -y autoremove; sudo apt autoclean; cd; clear'
+alias ins='sudo apt install'
+alias rem='sudo apt remove'
+alias auto='sudo apt autoremove'
 alias sr='apt-cache search -n'
 
 # tmux aliases
