@@ -2,17 +2,17 @@
 set PATH /home/sudarshan/anaconda3/bin $PATH
 
 # VAOSL mount point
-set OSL_MOUNT /net/vaosl01/opt/NFS
+set OSL_MOUNT_DIR /net/vaosl01/opt/NFS/su0
 
 # cuda
 #set PATH /usr/local/cuda-9.0/bin $PATH
 #set LD_LIBRARY_PATH /usr/local/cuda-9.0/lib64 $LD_LIBRARY_PATH
 
 # MIMIC
-#set mimic_datadir /mnt/Data/ml/MIMIC_dataset/
+set MIMIC_TEMP /storage/mimic-temp
 
 # FastAI
-#set fastai_dir /home/sudarshan/fastai
+set FASTAI /home/sudarshan/edu/fastai
 
 # Kaggle
-#set kaggle_dir /mnt/Data/ml/kaggle/competitions
+set KAGGLE_DIR /storage/kaggle-data

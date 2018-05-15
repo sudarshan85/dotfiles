@@ -1,14 +1,19 @@
 # system specific
 
 # general
-alias jnote='jupyter notebook --no-browser'
-alias jlab='jupyter lab'
 alias mem='watch -n 5 free -m'
 alias pdf='evince'
 alias wget='wget -c'
 alias grep='grep -n --color'
 alias vi='vim'
 alias show='clear; cat ~/.dotfiles/shell/fish/aliases | grep'
+
+# jupyter
+alias jnote='jupyter notebook --no-browser'
+alias jlab='jupyter lab'
+
+# conda
+alias els='conda info -e'
 alias act='activate'
 alias dact='conda deactivate'
 alias ctrlc='xclip -sel clip'
