@@ -2,11 +2,11 @@
 
 # general
 alias mem='watch -n 5 free -m'
-alias pdf='evince'
 alias wget='wget -c'
 alias grep='grep -n --color'
 alias vi='vim'
 alias show='clear; cat ~/.dotfiles/shell/fish/aliases | grep'
+alias ctrlc='xclip -sel clip'
 
 # jupyter
 alias jnote='jupyter notebook --no-browser'
@@ -16,7 +16,6 @@ alias jlab='jupyter lab'
 alias els='conda info -e'
 alias act='activate'
 alias dact='conda deactivate'
-alias ctrlc='xclip -sel clip'
 
 # git
 alias gitsync='git fetch upstream; git checkout master; git merge upstream/master; git push origin master'

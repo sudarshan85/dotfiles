@@ -1,8 +1,8 @@
 # Anaconda3
 set PATH /home/sudarshan/anaconda3/bin $PATH
 
-# VAOSL mount point
-set OSL_MOUNT_DIR /net/vaosl01/opt/NFS/su0
+# OSL Mount
+set OSL_MOUNT_DIR /net/vaosl01/opt/NFS
 
 # cuda
 #set PATH /usr/local/cuda-9.0/bin $PATH
