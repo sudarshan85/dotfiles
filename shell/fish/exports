@@ -1,18 +1,14 @@
 # Anaconda3
-set PATH /home/sudarshan/anaconda3/bin $PATH
-
-# OSL Mount
-set OSL_MOUNT_DIR /net/vaosl01/opt/NFS
+set CONDA_DIR /home/sudarshan/anaconda3
+set PATH $CONDA_DIR/bin $PATH
 
 # cuda
 #set PATH /usr/local/cuda-9.0/bin $PATH
 #set LD_LIBRARY_PATH /usr/local/cuda-9.0/lib64 $LD_LIBRARY_PATH
 
-# MIMIC
-set MIMIC_TEMP /storage/mimic-temp
+# snap
+set PATH /snap/bin $PATH
 
-# FastAI
-set FASTAI /home/sudarshan/edu/fastai
 
-# Kaggle
-set KAGGLE_DIR /storage/kaggle-data
+
+

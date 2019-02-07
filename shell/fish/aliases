@@ -10,7 +10,7 @@ alias ctrlc='xclip -sel clip'
 
 # jupyter
 alias jnote='jupyter notebook --no-browser'
-alias jlab='jupyter lab'
+alias jlab='jupyter lab --no-browser'
 
 # conda
 alias els='conda info -e'
