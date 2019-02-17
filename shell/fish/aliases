@@ -14,7 +14,7 @@ alias jlab='jupyter lab --no-browser'
 
 # conda
 alias els='conda info -e'
-alias act='activate'
+alias act='conda activate'
 alias dact='conda deactivate'
 
 # git
