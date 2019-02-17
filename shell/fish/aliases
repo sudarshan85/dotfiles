@@ -2,12 +2,23 @@
 
 # general
 alias mem='watch -n 5 free -m'
-alias pdf='evince'
 alias wget='wget -c'
 alias grep='grep -n --color'
 alias vi='vim'
 alias show='clear; cat ~/.dotfiles/shell/fish/aliases | grep'
 alias ctrlc='xclip -sel clip'
+<<<<<<< HEAD
+=======
+
+# jupyter
+alias jnote='jupyter notebook --no-browser'
+alias jlab='jupyter lab --no-browser'
+
+# conda
+alias els='conda info -e'
+alias act='activate'
+alias dact='conda deactivate'
+>>>>>>> dc374de23874de41b3f427c1bed4d7e4f1e186fe
 
 # fastai
 alias fd='cd $OSL_MOUNT_DIR/su0/fastai/data'
