@@ -21,6 +21,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set shell to bash
+set shell=/usr/bin/bash
+
 " Sets how many lines of history VIM has to remember
 set history=700
 set clipboard=unnamedplus
@@ -39,6 +42,14 @@ let mapleader = ","
 let g:mapleader = ","
 
 let g:ctrlp_working_path_mode = 'rw'
+
+" Remap ESC to jk combination key
+inoremap jk <esc>
+inoremap <C-e> <C-o>$
+
+" Set relative number
+set relativenumber
+set rnu
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -64,8 +75,13 @@ Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'taglist.vim'
-Plugin 'Tabmerge'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'ervandew/supertab'
+Plugin 'raimondi/delimitmate'
+Plugin 'tpope/vim-surround'
+
+"Plugin 'taglist.vim'
+"Plugin 'Tabmerge'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Zooming
@@ -100,8 +116,8 @@ command! SmallerFont call SmallerFont()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Taglist Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let Tlist_Use_Right_Window   = 1
-let g:Tlist_WinWidth = 40
+"let Tlist_Use_Right_Window   = 1
+"let g:Tlist_WinWidth = 40
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -185,7 +201,7 @@ set background=dark
 if has('gui_running')
     colorscheme earendel
 else
-    colorscheme earendel
+    colorscheme mopkai
 endif
 
 " Set extra options when running in GUI mode
@@ -221,15 +237,15 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
 set tw=500
 
 set ai "Auto indent
-set si "Smart indent
+"set si "Smart indent
 set wrap "Wrap lines
 
 """"""""""""""""""""""""""""""
