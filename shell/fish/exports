@@ -2,10 +2,5 @@
 set CONDA_DIR /home/sudarshan/anaconda3
 set PATH $CONDA_DIR/bin $PATH
 
-# cuda
-set CUDA_HOME /usr/local/cuda-9.1
-set PATH $CUDA_HOME/bin $PATH
-#set LD_LIBRARY_PATH /usr/local/cuda-9.0/lib64 $LD_LIBRARY_PATH
-
 # snap
 set PATH /snap/bin $PATH
