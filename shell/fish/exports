@@ -1,13 +1,5 @@
-# VAOSL mount point
-set OSL_MOUNT_DIR /net/vaosl01/opt/NFS
-set MY_DIR $OSL_MOUNT_DIR/su0
-
 # Anaconda3
-<<<<<<< HEAD
-set CONDA_DIR $OSL_MOUNT_DIR/su0/anaconda3
-=======
 set CONDA_DIR /home/sudarshan/anaconda3
->>>>>>> dc374de23874de41b3f427c1bed4d7e4f1e186fe
 set PATH $CONDA_DIR/bin $PATH
 
 # cuda
@@ -17,12 +9,3 @@ set PATH $CUDA_HOME/bin $PATH
 
 # snap
 set PATH /snap/bin $PATH
-
-
-
-<<<<<<< HEAD
-# Thinc
-set CUDA9 1
-=======
->>>>>>> dc374de23874de41b3f427c1bed4d7e4f1e186fe
-
