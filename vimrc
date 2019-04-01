@@ -22,7 +22,7 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set shell to bash
-set shell=/bin/bash
+set shell=/usr/bin/bash
 
 " Sets how many lines of history VIM has to remember
 set history=700
