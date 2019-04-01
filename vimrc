@@ -44,12 +44,14 @@ let g:mapleader = ","
 let g:ctrlp_working_path_mode = 'rw'
 
 " Remap ESC to jk combination key
-inoremap jk <esc>
+"inoremap jk <esc>
+imap jj <Esc>
 inoremap <C-e> <C-o>$
 
 " Set relative number
 set relativenumber
 set rnu
+set colorcolumn=101
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -73,12 +75,15 @@ Plugin 'gmarik/vundle'
 " My Plugins
 "Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'yggdroot/indentline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'raimondi/delimitmate'
+Plugin 'wesq3/vim-windowswap'
 Plugin 'tpope/vim-surround'
+Plugin 'davidhalter/jedi-vim'
 
 "Plugin 'taglist.vim'
 "Plugin 'Tabmerge'
@@ -242,7 +247,7 @@ set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
-set tw=500
+set tw=100
 
 set ai "Auto indent
 "set si "Smart indent
