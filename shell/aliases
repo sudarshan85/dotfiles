@@ -5,12 +5,16 @@ alias mem='watch -n 5 free -m'
 alias wget='wget -c'
 alias grep='grep -n --color'
 alias vi='vim'
-alias show='clear; cat ~/.dotfiles/aliases | grep'
+alias show='clear; cat ~/.dotfiles/shell/aliases | grep'
 alias ctrlc='xclip -sel clip'
 
 # jupyter
 alias jnote='jupyter notebook --ip=127.0.0.1 --no-browser'
 alias jlab='jupyter lab --ip=127.0.0.1 --no-browser'
+
+# config files edit
+alias zcon='vim ~/.dotfiles/shell/zsh/config.zsh'
+alias ohz='vim ~/.oh-my-zsh/oh-my-zsh.sh'
 
 # conda
 alias els='conda info -e'
