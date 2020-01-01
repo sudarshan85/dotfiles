@@ -9,8 +9,10 @@ alias show='clear; cat ~/.dotfiles/shell/fish/aliases | grep'
 alias ctrlc='xclip -sel clip'
 
 # jupyter
-alias jnote='jupyter notebook --no-browser'
-alias jlab='jupyter lab --no-browser'
+#alias jnote='jupyter notebook --no-browser'
+#alias jlab='jupyter lab --no-browser'
+alias jnote='jupyter notebook --ip=127.0.0.1 --no-browser'
+alias jlab='jupyter lab --ip=127.0.0.1 --no-browser'
 
 # conda
 alias els='conda info -e'
@@ -24,9 +26,6 @@ alias fm='cd $OSL_MOUNT_DIR/su0/fastai/models'
 # osl
 alias perms='/net/vaosl01/opt/NFS/bin/set_shared_access.sh'
 
-# jupyter
-alias jnote='jupyter notebook --ip=127.0.0.1 --no-browser'
-alias jlab='jupyter lab --ip=127.0.0.1 --no-browser'
 
 # conda
 alias els='conda info -e'

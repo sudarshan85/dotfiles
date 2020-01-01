@@ -1,5 +1,5 @@
 # Anaconda3
-set CONDA_DIR /home/sudarshan/anaconda3
+set CONDA_DIR /storage/anaconda3
 set PATH $CONDA_DIR/bin $PATH
 
 # snap
