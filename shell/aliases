@@ -8,6 +8,10 @@ alias vi='vim'
 alias show='clear; cat ~/.dotfiles/shell/aliases | grep'
 alias ctrlc='xclip -sel clip'
 
+# pip
+alias pipins='pip3 --no-cache-dir install'
+alias piprm='pip3 uninstall'
+
 # jupyter
 alias jnote='jupyter notebook --ip=127.0.0.1 --no-browser'
 alias jlab='jupyter lab --ip=127.0.0.1 --no-browser'
