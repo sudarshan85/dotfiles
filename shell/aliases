@@ -26,6 +26,9 @@ alias act='conda activate'
 alias dact='conda deactivate'
 alias emake='conda create -yn'
 alias erm='conda remove --all -n'
+alias cins='conda install -y'
+alias crm='conda remove -y'
+alias cup='conda update -n base -yc defaults conda'
 
 # git
 alias gitsync='git fetch upstream; git checkout master; git merge upstream/master; git push origin master'

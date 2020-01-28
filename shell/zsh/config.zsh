@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-. ~/.dotfiles/shell/zsh/z.sh
-. ~/.dotfiles/shell/aliases
+ source ~/.dotfiles/shell/zsh/z.sh
+ source ~/.dotfiles/shell/aliases
 
-export PATH=~/miniconda3/bin:$PATH
+ export PATH=~/miniconda3/bin:$PATH
