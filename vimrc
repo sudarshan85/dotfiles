@@ -236,15 +236,15 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 1 tab == 4 spaces
+set shiftwidth=2
+set tabstop=2
+
 " Use spaces instead of tabs
 set expandtab
 
 " Be smart when using tabs ;)
 set smarttab
-
-" 1 tab == 4 spaces
-set shiftwidth=2
-set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
@@ -253,6 +253,8 @@ set tw=100
 set ai "Auto indent
 "set si "Smart indent
 set wrap "Wrap lines
+
+set sessionoptions-=options
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -485,3 +487,9 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+
+augroup my_python_settings
+    autocmd!
+    autocmd FileType python setlocal tabstop=2
+    autocmd FileType python setlocal shiftwidth=2
+augroup END

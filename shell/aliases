@@ -24,8 +24,10 @@ alias ohz='vim ~/.oh-my-zsh/oh-my-zsh.sh'
 alias els='conda info -e'
 alias act='conda activate'
 alias dact='conda deactivate'
-alias emake='conda create -n'
-alias erm='conda remove --all -n'
+alias emk='conda create -yn'
+alias erm='conda remove --all -yn'
+alias cins='conda install -y'
+alias cuins='conda uninstall -y'
 
 # git
 alias gitsync='git fetch upstream; git checkout master; git merge upstream/master; git push origin master'

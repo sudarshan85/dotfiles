@@ -4,6 +4,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/sudarshan/.oh-my-zsh"
+export TRANSFORMERS_CACHE="/mnt/d/WSL_Storage/transformers_cache"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -100,3 +101,17 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 . ~/.dotfiles/shell/zsh/z.sh
 . ~/.dotfiles/shell/aliases
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/sudarshan/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/sudarshan/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/sudarshan/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/sudarshan/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
