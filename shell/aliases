@@ -24,6 +24,7 @@ alias ohz='vim ~/.oh-my-zsh/oh-my-zsh.sh'
 alias els='conda info -e'
 alias act='conda activate'
 alias dact='conda deactivate'
+<<<<<<< HEAD
 alias emk='conda create -yn'
 alias erm='conda remove --all -yn'
 alias cins='conda install -y'
