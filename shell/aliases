@@ -33,6 +33,7 @@ alias emk='conda create -yn'
 alias erm='conda remove --all -yn'
 alias cins='conda install -y'
 alias cuins='conda uninstall -y'
+alias cup='conda update -yn base -c defaults conda'
 
 # git
 alias gitsync='git fetch upstream; git checkout master; git merge upstream/master; git push origin master'
