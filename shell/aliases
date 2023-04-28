@@ -34,6 +34,10 @@ alias erm='conda remove --all -yn'
 alias cins='conda install -y'
 alias cuins='conda uninstall -y'
 alias cup='conda update -yn base -c defaults conda'
+alias ecre='conda env create -f'
+alias eup='conda env update -f'
+alias eex='conda env export | head -n -1 > environment.yml'
+alias emkf='conda env create -f'
 
 # git
 alias gitsync='git fetch upstream; git checkout master; git merge upstream/master; git push origin master'
